@@ -22,7 +22,7 @@ app = Client(
 
 # Json ile veri cekiyoruz
 dovizjson = "https://api.genelpara.com/embed/doviz.json"
-dovizcek = requests.get('dovizjson')
+dovizcek = requests.get(dovizjson)
 dovizveri = json.loads('dovizcek.text')
 
 # Jsondan cekilen verileri degiskenlere atiyoruz
