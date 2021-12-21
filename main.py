@@ -21,12 +21,12 @@ app = Client(
 )
 
 # Json ile veri cekiyoruz
-anlikjson = "https://api.agacinayetvar.ml/canli.json"
-anlikcek = requests.get(anlikjson)
-anlikveri = json.loads(anlik.text)
+dovizjson = "https://api.agacinayetvar.ml/canli.json"
+dovizcek = requests.get(dovizjson)
+dovizveri = json.loads(doviz.text)
 
 # Jsondan cekilen verileri degiskenlere atiyoruz
-dolar = anlikveri["USD"]["Alis"]
+dolar = dovizveri["Anlik"]["Alis"]
 
 # Baslat komutunda atilacak mesaji ayarliyoruz
 @app.on_message(filters.command("start"))
