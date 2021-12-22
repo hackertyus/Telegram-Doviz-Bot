@@ -23,7 +23,7 @@ app = Client(
 # Json ile veri cekiyoruz
 dovizjson = "https://api.agacinayetvar.ml/canli.json"
 dovizcek = requests.get(dovizjson)
-dovizveri = json.loads(doviz.text)
+dovizveri = json.loads(dovizcek.text)
 
 # Jsondan cekilen verileri degiskenlere atiyoruz
 dolar = dovizveri["Anlik"]["Alis"]
