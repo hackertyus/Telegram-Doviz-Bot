@@ -26,7 +26,7 @@ dovizcek = requests.get(dovizjson)
 dovizveri = json.loads(dovizcek.text)
 
 # Jsondan cekilen verileri degiskenlere atiyoruz
-dolar = dovizveri["Anlik"]["Alis"]
+dolar = dovizveri["Anlık"][0]
 
 # Baslat komutunda atilacak mesaji ayarliyoruz
 @app.on_message(filters.command("start"))
@@ -39,7 +39,7 @@ You can contact with me from PM if you need more help.
 """)
 
 # Degiskenlere atadigimiz veriyi Telegram'a yukluyoruz
-@app.on_message(filters.command("doviz"))
+@app.on_message(filters.command("dolar"))
 async def doviz(client, message):
     await client.send_message(message.chat.id, f"""
 Dolar: ```{dolar}```""")
