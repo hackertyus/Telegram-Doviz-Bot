@@ -39,8 +39,8 @@ You can contact with me from PM if you need more help.
 async def doviz(client, message):
     dovizcek = requests.get(dovizjson)
     dovizveri = json.loads(dovizcek.text)
-    print(dovizveri)
+    dolar = dovizveri.Anlik[0]
     await client.send_message(message.chat.id, f"""
-Dolar: ```{dovizveri}```""")
+Dolar: ```Alış: {dolar.alis}\nSatış: {dolar.satis}```""")
 
 app.run()
