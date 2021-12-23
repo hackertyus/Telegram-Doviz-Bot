@@ -41,7 +41,8 @@ You can contact with me from PM if you need more help.
 # Degiskenlere atadigimiz veriyi Telegram'a yukluyoruz
 @app.on_message(filters.command("dolar"))
 async def doviz(client, message):
+print(dovizveri)
     await client.send_message(message.chat.id, f"""
-Dolar: print(dovizveri))
+Dolar: ```{dolar}```""")
 
 app.run()
