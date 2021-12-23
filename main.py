@@ -26,7 +26,7 @@ dovizcek = requests.get(dovizjson)
 dovizveri = json.loads(dovizcek.text)
 
 # Jsondan cekilen verileri degiskenlere atiyoruz
-dolar = dovizveri["Anlık"][0]
+dolar = dovizveri["alis"][0]
 
 # Baslat komutunda atilacak mesaji ayarliyoruz
 @app.on_message(filters.command("start"))
