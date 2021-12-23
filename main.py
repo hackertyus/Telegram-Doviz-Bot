@@ -42,6 +42,6 @@ You can contact with me from PM if you need more help.
 @app.on_message(filters.command("dolar"))
 async def doviz(client, message):
     await client.send_message(message.chat.id, f"""
-Dolar: ```{dolar}```""")
+Dolar: print(dovizveri))
 
 app.run()
